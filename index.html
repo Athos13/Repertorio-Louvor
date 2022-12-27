@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repertório INT</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-titulo">
+           <div class="logo">
+            <img src="https://scontent.fbsb12-1.fna.fbcdn.net/v/t1.6435-9/73173866_107318284039988_1857244760457084928_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=g3TScEo_AIYAX8nR3uK&tn=tyM8tyKLS9l1ztNL&_nc_ht=scontent.fbsb12-1.fna&oh=00_AfAYpheR2MbjmJGsboRNGY7Tjygdv4a5_TnP9pgfh5SDXw&oe=63B2F766">
+           </div>
+
+           <h1>Repertório INT</h1>
+
+        </div>
+    </header>
+
+
+
+    <main>
+        <section class="instruções">
+            <p class="texto"><span><strong><i>Como usar:</i></strong></span> Aqui podemos gerenciar nosso repertório ! Adicione músicas usando o ADICIONAR,
+                pesquise por algo especifico usando o PESQUISAR, filtre por temas nos BOTÕES correspondentes.
+            </p>
+            
+        </section>
+
+        <section class="menu">
+            <label for="campo-busca" class="label-pesquisar">Pesquisar</label>
+            <input type="search" id="campo-busca" placeholder="Digite sua música">
+        
+<!-- Os menus de temas e do botão adicionar-->
+          <div class="add-filtrar"> 
+<!-- Botão ADICIONAR e seu formulário-->
+            <div class="container-adiciona">
+                    <button onclick="mostraFormAdicionar()" id="botao-adicionar">+ Adicionar</button>
+                
+                <ul class="ul-externa-form">
+                    <button onclick='escondeFormAdicionar()' id="esconderForm">
+                        <div class="barra1-escondeForm"></div>
+                        <div class="barra2-escondeForm"></div>
+                    </button> 
+                    
+                    <form class="form-adicionar">
+                                <label for="nome" > Nome:</label>
+                                <input  id="nome" required placeholder="campo obrigatório" >
+                            
+                                <label for="autor"> Autor:</label>
+                                <input  id="autor" required placeholder="campo obrigatório">
+                            
+                                <label for="tom"> Tom Original:</label>
+                                <input  id="tom" maxlength="3" placeholder="campo obrigatório">
+                            
+                                <label for="tema"> Tema:</label>
+                                <select id="tema">
+                                    <option> Adoração</option>
+                                    <option> Celebração</option>
+                                    <option selected> Nenhum</option>
+                                </select>
+                                
+                                <label for="link"> Link:</label>
+                                <input type="link" id="link">
+                                
+                                <input type="reset" value="Limpar">
+                
+                    </form>
+                    <input type="submit" onclick='checaVazio()' id="criar" value="adicionar">
+
+                </ul>
+                    
+              </div>
+                
+<!-- Lista de TEMAS e seus botões-->
+                <ul class="ul-temas-block"> Temas
+                    <ul class="ul-temas-none">
+                    
+                            <li>
+                                <button id="Adoracao">Adoração</button>
+                            </li>
+    
+                            <li>
+                                <button id="Celebracao">Celebração</button>
+                            </li> 
+                            
+                            <li>
+                                <button id="Todos-temas">Todos</button>
+                            </li> 
+                        
+                    </ul>
+                </ul>
+
+            </div>
+       </section>
+
+        <section class="lista-musicas">
+            <ul class="ul-lista-musicas">
+            </ul>
+
+        </section>
+        
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>

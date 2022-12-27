@@ -1,0 +1,425 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+html{
+    font-size: 25px;
+    min-height:100vh ;
+}
+
+body{
+    background-image:linear-gradient(to bottom left, rgba(56, 56, 193, 0.6),rgb(130, 16, 165,0.8));
+    color: white;  
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/*Configurações cabeçalho e e instruções*/
+header{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.logo-titulo{
+    width: 80%;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width:90px;
+    height: 100%;
+    position: relative;
+    right:30px;
+}
+
+img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+main{
+    border:2px solid black;
+    border-radius: 10px;
+    width:90%;
+}
+
+section {
+    max-width:100%;
+    margin:20px;
+    height: 70px;  
+}
+
+span{
+    font-size: 1.3em;
+}
+
+
+/*Configurações de menu, filtros*/
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 60px;
+}
+
+.add-filtrar{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    cursor: pointer;
+    
+}
+
+.add-filtrar button{
+    
+    border-radius: 5px;
+    background: white;
+    color:rgba(56, 56, 193, 0.6);
+    border: none;
+    width:140px;
+    height:32px;
+    font-size:0.8em;
+    font-weight: bold;
+    text-align: center;
+    cursor:pointer;
+    transition-property: border-radius, width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.add-filtrar .botao-encontro{
+    height: 40px;
+}
+
+.add-filtrar button:hover{
+    border-radius: 10px;
+    width: 170px;
+}
+
+
+/*Campo de Pesquisa*/
+#campo-busca{
+    height: 30px;
+    border-radius: 7px;
+    font-size: 0.8em;
+    color: rgba(56, 56, 193, 0.6);
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#campo-busca::placeholder{
+    color: lightgrey;
+    text-align: center;
+}
+
+/*Menu dropbox do Adicionar*/
+.container-adiciona{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.form-adicionar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;  
+}
+
+.form-adicionar input , select{
+    width: 80%;
+    height: 23px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+input[type="reset"]{
+    width: 82%;
+    height: 30px;
+    background-color: white;
+    color:rgb(130, 16, 165,0.8);
+    cursor:pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 0.7em;
+}
+
+input[type="submit"]{
+    width: 75%;
+    height: 40px;
+    background-color: rgb(130, 16, 165,0.8);
+    color:white;
+    cursor:pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 0.7em;
+}
+
+
+#esconderForm{
+    margin-top: 10px;
+    margin-right: 10px;
+    width:50px;
+    height: 40px;
+    position:relative;
+    left: 225px;
+    border-radius: 10px;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.barra1-escondeForm{
+    max-width: 100%;
+    max-height: 100%;
+    width:4px ;
+    height: 80%;
+    background:red;
+    transform:translate(2px,2px) rotate(45deg);
+    transform-origin: center;
+}
+
+.barra2-escondeForm{
+    max-width: 100%;
+    max-height: 100%;
+    width:4px ;
+    height: 80%;
+    background:red;
+    transform:translate(-2px,2px) rotate(-45deg);
+    transform-origin: center;
+}
+
+.container-adiciona .ul-externa-form{
+    background-color: white;
+    color:rgba(56, 56, 193, 0.6);
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    height: 490px;
+    
+}
+
+
+/*Menu dropbox temas*/
+.ul-temas-block{
+    border-radius: 5px;
+    color:rgba(56, 56, 193, 0.6);
+    background: white;
+    cursor:pointer;
+    width: 130px;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ul-temas-block .ul-temas-none{
+    display: none;
+    list-style: none;
+    width: 200px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.ul-temas-block:hover .ul-temas-none{
+    position:absolute;
+    margin-left: -70px;
+    margin-top: 35px;
+    z-index: 10;
+    display: block;
+    background-color:rgba(56, 56, 193, 0.6);
+}
+
+.ul-temas-none{
+    list-style: none;
+}
+
+.ul-temas-none li{
+    margin-top: 10px;
+    min-width: 100%;
+}
+
+
+
+/*Configurando a lista de músicas*/
+.lista-musicas{
+    min-height: 370px;
+    height: 100%;
+    max-height: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;    
+}
+
+.lista-musicas ul{
+    max-height:100%;
+    height: 100%;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.lista-musicas ul li{
+    max-width: 100%;
+    height: 300px;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.lista-musicas ul li p{
+    margin-left: 10px;
+    color:rgba(56, 56, 193, 0.6);
+}
+
+.lista-musicas ul li p button{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+@media (max-width:1235px) {   
+    .main{
+        min-height: 1400px;
+    }
+    
+    .label-pesquisar{
+        display: none;
+    }
+    #campo-busca{
+        margin-left: 0;
+    }
+    .lista-musicas ul{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:900px) {   
+    .menu{
+        margin-top: 70px;
+    }
+    .label-pesquisar{
+        display: none;
+    }
+
+}
+
+@media (max-width:770px) {   
+    .menu{
+        margin-top: 90px;
+    }
+}
+
+@media(max-width:706px) {   
+    
+    .lista-musicas ul{
+        grid-template-columns: 1fr;
+    }
+
+    #campo-busca{
+        width: 300px;
+    }
+
+    .add-filtrar{
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .add-filtrar button{
+        width: 125px;
+    }
+   
+    .container-adiciona{
+        width: auto;
+        margin-right: 40px;
+    }
+
+    .menu{
+        height: 140px;
+        align-items: center;
+        margin-top: 80px;
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+    }
+
+    html{
+        font-size: 22px;
+    }
+
+    .logo-titulo{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    main{
+        margin-top: 30px;
+    }
+
+    header{
+        height: 150px;
+    }
+
+    .logo{
+        right: 0;
+    }
+
+}
+
+
+@media(max-width:426px) {   
+    
+    
+    html{
+        font-size: 21px;
+    }
+
+    .lista-musicas{
+        margin-top: 0px;
+    }
+
+    .menu{
+        margin-top: 125px;
+    }
+    
+    #campo-busca{
+        height:35px;
+        font-size: 18px;
+    }
+}
+

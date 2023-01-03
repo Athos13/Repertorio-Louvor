@@ -111,27 +111,18 @@ function criaAdicionaItem(){
     textNome.style.textAlign = "center"
     textNome.style.marginRight= "35px"
 
-    //localStorage.setItem('nome',JSON.stringify(textNome.textContent) )
-
 
     let textAutor = document.createElement('p')
     textAutor.textContent="Autor: "+autorForm.value
     
-    //localStorage.setItem('autor',JSON.stringify(textAutor.textContent) ) 
-
-
     let textTom = document.createElement('p')
     textTom.textContent="Tom Original: "+tomForm.value
 
-    //localStorage.setItem('tom',JSON.stringify(textTom.textContent) ) 
-
-    
     let textTema = document.createElement('p')
     textTema.textContent="Tema: "+temaForm.value
 
-    //localStorage.setItem('tema',JSON.stringify(textTema.textContent) ) 
 
-    
+
     //cria dados do Link na li
     let textLink = document.createElement('p')
     textLink.textContent="Link: "
@@ -140,8 +131,6 @@ function criaAdicionaItem(){
     linkDoP.href=linkForm.value
     linkDoP.target="_blank"
     textLink.appendChild(linkDoP)
-
-    //localStorage.setItem('link',JSON.stringify(textLink.textContent) ) 
 
 
     //cria botão excluir e da suas formatações
@@ -175,7 +164,7 @@ function criaAdicionaItem(){
     nomesMusicas = Array.from(ulFormListaMusica.querySelectorAll(".titulo"))
     temasMusicas.push(temaForm.value)
     
-    //localStorage.clear()
+
 }
 
 

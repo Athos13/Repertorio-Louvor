@@ -37,7 +37,7 @@ function escondeFormAdicionar(){
 
 /*Checa se foi digitado número e barra ele. O "e" representa o que foi digitado, variável keyCode recebe
 o valor do if ternário, entre parenteses, que testa qual o código da tecla digitada e o retorna.
-O segundo if testa se o keyCode está no rang dos que são números, se sim nós o impedimos de ser digitado
+O segundo if testa se o keyCode está no rank dos que são números, se sim nós o impedimos de ser digitado
 e retornamos um alert para o usuário */
 nomeForm.addEventListener("keypress", function(e){
     let keyCode = (e.keyCode ? e.keyCode: e.which)
@@ -188,7 +188,7 @@ function mostraTodas(){
 /*Faz loop no array das lis e checa se cada item, em seu conteúdo de texto, transformado em minusculo, com seus caracteres
 normalizados e trocados todos com acento ( no caso, representados pelo código \u0300-\u036f) por sua versão sem (representados
 por "") inclui o valor do input também passando pelo mesmo processo, removidos espaços no inicio e no final( trim()).
-OBS. TROCA DE ACENTOS USOU RegexExp(expressão regular) O QUE NÃO ESTUDEI AINDA
+OBS. troca de acentos usa RegexExp
 */
 function filtraMusicasPesquisar(valor){
     
@@ -256,7 +256,7 @@ function filtraMusicasCelebracao(valorCelebracao){
 }
 
 
-//Todos
+//Mostra todos os temas
 botaoTodosTemas.addEventListener('click', mostraTodas)
 
 
